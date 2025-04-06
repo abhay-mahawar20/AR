@@ -1,0 +1,159 @@
+.navbar {
+    background: #000000; /* Solid black background */
+    color: white; /* White text */
+    padding: 15px 0; /* Padding for the navbar */
+    position: sticky; /* Stick to the top */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for the navbar */
+    margin: auto; /* Center the container */
+    padding: 0 20px; /* Padding for the container */
+}
+
+.logo {
+    font-size: 28px; /* Logo font size */
+    font-weight: bold; /* Bold logo */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* Light shadow for logo */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text */
+    font-size: 18px; /* Font size for links */
+    position: relative; /* Position for pseudo-element */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a::after {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Center it horizontally */
+    bottom: -5px; /* Position it below the text */
+    width: 0; /* Initial width */
+    height: 2px; /* Height of the underline */
+    background: #ffcc00; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expand width on hover */
+    left: 0; /* Align to the left */
+}
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    display: flex;
+    flex-direction: column; /* Stack navbar and form vertically */
+    align-items: left; /* Center items horizontally */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+/* Form Container Styles */
+.form-container {
+    background-color: #222; /* Darker black for the form background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Max width for larger screens */
+    margin-top: 20px; /* Space between navbar and form */
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    color: #ff8c00; /* Orange color for the heading */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ff8c00; /* Orange color for labels */
+}
+
+/* Input and Textarea Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width of the container */
+    padding: 10px;
+    border: 1px solid #ff8c00; /* Orange border */
+    border-radius: 4px;
+    background-color: #333; /* Dark background for inputs */
+    color: #fff; /* White text for inputs */
+}
+
+/* Focus Styles for Inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #ff8c00; /* Orange border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+button {
+    width: 100%; /* Full width of the container */
+    padding: 10px;
+    background-color: #ff8c00; /* Orange background for button */
+    color: #000; /* Black text for button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Button Hover Styles */
+button:hover {
+    background-color: #e07b00; /* Darker orange on hover */
+}
+
+/* Social Media Styles */
+.social-media {
+    margin-top: 20px;
+    text-align: center; /* Center social media icons */
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px; /* Corrected margin */
+    transition: color 0.3s;
+}
+
+/* Social Icon Hover Styles */
+.social-icon:hover {
+    color: #ffcc00; /* Change color on hover */
+}

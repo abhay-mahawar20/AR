@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: space-around; /* Space between sliders */
+    padding: 100px;
+}
+
+.slider {
+    position: relative;
+    max-width: 300px; /* Adjusted for a more compact look */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+img:hover {
+    filter: brightness(1);
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.indicators {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+.navbar {
+    background: #000000; /* Solid black background */
+    color: white; /* White text */
+    padding: 15px 0; /* Padding for the navbar */
+    position: sticky; /* Stick to the top */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for the navbar */
+    margin: auto; /* Center the container */
+    padding: 0 20px; /* Padding for the container */
+}
+
+.logo {
+    font-size: 28px; /* Logo font size */
+    font-weight: bold; /* Bold logo */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* Light shadow for logo */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text */
+    font-size: 18px; /* Font size for links */
+    position: relative; /* Position for pseudo-element */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a::after {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Center it horizontally */
+    bottom: -5px; /* Position it below the text */
+    width: 0; /* Initial width */
+    height: 2px; /* Height of the underline */
+    background: #ffcc00; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expand width on hover */
+    left: 0; /* Align to the left */
+}
+/*--facatility---*/
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius:10px;
+    margin-bottom:5%;
+    text-align: left;
+    gap: 50px;
+}
+.facilities-col img{
+    width: 300px;
+    border-radius: 10px;
+    height: 200px;
+    margin-left: 10px;
+}
+.facilities-col img:hover{
+    box-shadow: 0 0 20px 0px rgb(251, 163, 1);
+}
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+    color:#fff
+}
+.facilities h1{
+    color: #fff;
+    font-size: 50px;
+    text-shadow: #f4f4f4;
+}
+.row h1{
+    text-align: left;
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 2px 4px 30px white;
+}
+.row p{
+    color: #f4f4f4;
+    text-align: left;
+    font-size: 25px;
+}
+.facilities h1:hover{
+    text-shadow:2px 4px 30px #ffcc00;
+    transition: 0.5s;
+}
+/*---line animation--*/
+
+.container {
+    width: 80%; /* Width of the container */
+    height: 50px; /* Height of the line */
+    position: relative; /* Position relative for absolute child */
+    overflow: hidden; /* Hide overflow */
+    align-items: center;
+}
+
+.line {
+    width: 100%; /* Full width of the container */
+    height: 2px; /* Height of the line */
+    background-color: #f5c904; /* Color of the line */
+    position: absolute; /* Position absolute to animate */
+    left: -100%; /* Start off-screen to the left */
+    animation: moveLine 3s linear infinite; /* Continuous animation */
+    
+}
+.bb{
+    align-items: center;
+}
+
+@keyframes moveLine {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    50% {
+        left: 100%; /* Move to off-screen to the right */
+    }
+    100% {
+        left: -100%; /* Move back to off-screen to the left */
+    }
+}

@@ -1,0 +1,450 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;    
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    background-position: center;
+    background-size: center;
+
+}
+.navbar{
+    width: 90%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.logo:hover{
+    box-shadow: 0 0 20px 0px rgb(251, 163, 1);
+    transition: 0.5s;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+}
+li a:hover{
+    background-color: orange;
+    transition:0.5s;
+    box-shadow: 0 0 20px 0px rgb(251, 163, 1);
+}
+.navbar a:hover{
+    color: black;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    color: white;
+    top:45%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.content h1{
+    margin-top: 80px;
+    font-size: 70px;
+    font-weight: 800;
+   
+}
+button{
+    width: 200px;
+    padding: 15px;
+    margin: 20px 5px;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+    border: 2px;
+    font-size:20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover{
+    background: rgb(251, 163, 1) ;
+    transition: 0.5s;
+    box-shadow: 0 0 20px 0px rgb(251, 163, 1);
+}
+button:hover{
+    color: white;
+}
+.banner video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:-1;
+}
+@media(min-aspect-ratio:16/9){
+    .banner video{
+        width:100%;
+        height:auto
+    }
+}
+
+/*----- course -----*/
+.course{
+    width:80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+.course h1{
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+    text-shadow: 2px 4px 30px white;
+}
+h2{
+    color:white;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: left;
+}
+p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+
+}
+.course p:hover{
+    color: black;
+    transform: scale(1.1);
+    transition-duration: 1s;
+    
+
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+hs{
+    text-align: center;
+    font-weight: 600;
+    margin: 10 px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgb(251, 163, 1);
+}
+.course h1:hover{
+    text-shadow:2px 4px 30px #ffcc00;
+    transition: 0.5s;
+}
+.course-col h3:hover{
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+/*----- campus -----*/
+.campus{
+    width:80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(255, 136, 0, 0.7);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition:0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+/*--facatility---*/
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilities h2{
+    text-align:center;
+    font-size: 30px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius:10px;
+    margin-bottom:5%;
+    text-align: left;
+}
+.facilities-col:hover{
+    box-shadow: #ffcc00;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities-col img:hover{
+    box-shadow: 0 0 20px 0px rgb(251, 163, 1);
+    transition: 0.5s;
+
+
+}
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+    color:#fff
+}
+.facilities h1{
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 2px 4px 30px white;
+}
+.facilities h1:hover{
+    text-shadow: 2px 4px 30px orange;
+    transition: 2s;
+}
+.facilities-col p{
+    color: bisque ;
+    font-size: 15px;
+    text-shadow: 2px 4px 30px white;
+}
+.facilities-col p:hover{
+    text-shadow:2px 4px 5px orange ;
+    transition: 1s;
+}
+.facilities row{
+    box-shadow: 0 0 20px 0px rgb(251, 163, 1) ;
+}
+
+/*------testimonials-----*/
+
+
+.second p{
+    color: white;
+    text-align: left;
+    font-size: 20px;
+
+}
+.second p:hover{
+    color: white;
+}
+
+
+/*----contact us-----*/
+.cta{
+    margin:100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(website/images.jfif);
+   background-position: center;
+   background-size: cover;
+   border-radius: 10px;
+   text-align: center;
+   padding: 100px 0;
+   color:#fff;
+
+}
+.cta h1{
+    color: #fff;
+    margin-bottom:40px ;
+    padding:0;
+
+}
+/*animated text*/
+.container {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+}
+
+.animated-text {
+    font-size: 3rem;
+    color: black; /* Black text */
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.5), /* Soft white glow */
+        0 0 10px rgba(255, 255, 255, 0.5), /* Medium white glow */
+        0 0 15px rgba(255, 255, 255, 0.5), /* Strong white glow */
+        0 0 20px rgba(255, 255, 255, 0.5); /* Very strong white glow */
+    animation: glowAnimation 1.5s infinite alternate; /* Automatic glow animation */
+}
+
+/* Keyframes for glowing text animation */
+@keyframes glowAnimation {
+    0% {
+        text-shadow: 
+            0 0 5px rgba(255, 255, 255, 0.5),
+            0 0 10px rgba(255, 255, 255, 0.5),
+            0 0 15px rgba(255, 255, 255, 0.5),
+            0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, 1),
+            0 0 20px rgba(255, 255, 255, 1),
+            0 0 30px rgba(255, 255, 255, 1),
+            0 0 40px rgba(255, 255, 255, 1);
+    }
+}
+
+
+
+/*--new-*/
+.new{
+    display: inline-block;
+    text-decoration: none;
+    color:#fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    border-radius: 20px;
+}
+.new:hover{
+    border:1px solid orange;
+    background: orange;
+    transition: 1s;
+    box-shadow: 0 0 20px 0px rgb(251, 163, 1);
+
+}
+footer {
+    background: linear-gradient(135deg, rgba(251, 251, 251, 0.5),rgba(0, 0, 0, 0.999));
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-content p{
+    color: white;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: yellow; /* Change color on hover */
+    background-color: #f5c904;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 10 px;
+    transition: color 0.3s;
+    
+}
+
+.social-icon:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/*---line animation--*/
+
+.container {
+    width: 80%; /* Width of the container */
+    height: 10px; /* Height of the line */
+    position: relative; /* Position relative for absolute child */
+    overflow: hidden; /* Hide overflow */
+    align-items: center;
+}
+
+.line {
+    width: 100%; /* Full width of the container */
+    height: 2px; /* Height of the line */
+    background-color: #f5c904; /* Color of the line */
+    position: absolute; /* Position absolute to animate */
+    left: -100%; /* Start off-screen to the left */
+    animation: moveLine 3s linear infinite; /* Continuous animation */
+    
+}
+.bb{
+    align-items: center;
+}
+
+@keyframes moveLine {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    50% {
+        left: 100%; /* Move to off-screen to the right */
+    }
+    100% {
+        left: -100%; /* Move back to off-screen to the left */
+    }
+}

@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3c3b3b;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #282c34;
+    color: orange;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img, 
+.gallery-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+video {
+    border-radius: 10px;
+}
+
+/* Optional: Add a play button overlay for videos */
+.gallery-item video {
+    position: relative;
+}
+
+.gallery-item video::before {
+    content: "▶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: white;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Prevent interaction */
+}
+
+.gallery-item video:hover::before {
+    opacity: 1;
+}
+/* Navigation Bar Styles */
+.navbar {
+    background: #000000; /* Solid black background */
+    color: white; /* White text */
+    padding: 15px 0; /* Padding for the navbar */
+    position: sticky; /* Stick to the top */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for the navbar */
+    margin: auto; /* Center the container */
+    padding: 0 20px; /* Padding for the container */
+}
+
+.logo {
+    font-size: 28px; /* Logo font size */
+    font-weight: bold; /* Bold logo */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* Light shadow for logo */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text */
+    font-size: 18px; /* Font size for links */
+    position: relative; /* Position for pseudo-element */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a::after {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    left: 50%; /* Center it horizontally */
+    bottom: -5px; /* Position it below the text */
+    width: 0; /* Initial width */
+    height: 2px; /* Height of the underline */
+    background: #ffcc00; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expand width on hover */
+    left: 0; /* Align to the left */
+}
+
